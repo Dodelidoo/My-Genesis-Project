@@ -240,7 +240,7 @@
 										</li>
 										
 										<li><!-- CONTACT -->
-											<a href="#contact_us">
+											<a href="#contact">
 												CONTACT
 											</a>
 										</li>
@@ -584,9 +584,7 @@
 			
 			
 			<!-- Services -->
-			<section id="Corporate_Read_more">
-			<section id="Residential_Read_more">	
-			<section id="Award_Read_more">
+			
 			
 				<div class="container">
 
@@ -631,9 +629,7 @@
 				</div>
 			</section>
 			</section id>
-			</section id="Corporate_Read_more">
-			</section id="Residential_Read_more">	
-			</section id="Award_Read_more">
+			
 			<!-- /Services -->
 
 
@@ -653,9 +649,6 @@
 				</div>
 				</section>
 			<!-- /Parallax -->
-
-
-
 
 			<!-- PORTFOLIO -->
 			<section id= "portfolio">
@@ -1125,7 +1118,7 @@
 
 
 			<!-- News -->
-			<section id="news">
+			
 				<div class="container">
 
 					<div class="heading-title heading-dotted text-center">
@@ -1316,8 +1309,7 @@
 
 		
 			<!-- Clients -->
-			<section id="clients"></section>
-			<section class="alternate">
+			<section id="clients">
 				<div class="container">
 
 					<div class="heading-title heading-dotted text-center">
@@ -1342,27 +1334,27 @@
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
 							<a href="#">
-								<img class="img-fluid" src="pictures/facebook-logo.png" alt="Facebook logo" />
+								<img class="img-fluid" src="pictures/facebook-logo.png" alt="Facebook-logo" />
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
 							<a href="#">
-								<img class="img-fluid" src="pictures/ikea-logo.png" alt="Ikea logo" />
+								<img class="img-fluid" src="pictures/ikea-logo.png" alt="Ikea-logo" />
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
 							<a href="#">
-								<img class="img-fluid" src="pictures/google-logo.png" alt="client" />
+								<img class="img-fluid" src="pictures/google-logo.png" alt="Google-logo" />
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
 							<a href="#">
-								<img class="img-fluid" src="pictures/Aston_Martin-logo.jpg" alt="Aston Martin logo" />
+								<img class="img-fluid" src="pictures/Aston_Martin-logo.jpg" alt="Aston-Martin-logo" />
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
 							<a href="#">
-								<img class="img-fluid" src="pictures/amazon-logo.png" alt="Amazon logo" />
+								<img class="img-fluid" src="pictures/amazon-logo.png" alt="Amazon-logo" />
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
@@ -1372,155 +1364,152 @@
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
 							<a href="#">
-								<img class="img-fluid" src="pictures/Logo-Disney.png" alt="Disney logo" />
+								<img class="img-fluid" src="pictures/NASA_logo.png" alt="Nasa-logo" />
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
 							<a href="#">
-								<img class="img-fluid" src="pictures/Logo-Disney.png" alt="Disney logo" />
+								<img class="img-fluid" src="pictures/CNTower.png" alt="CNTower-logo" />
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
 							<a href="#">
-								<img class="img-fluid" src="pictures/Logo-Disney.png" alt="Disney logo" />
+								<img class="img-fluid" src="pictures/Fedex-logo.png" alt="Fedex-logo" />
 							</a>
 						</li>
 					</ul>
 
 				</div>
 			</section>	
-			</section>
+			</section id="clients">
 			<!-- /Clients -->
 
-			<!-- Contact Us 
-			<section id="contact_us"/>
-			<section class="b-0">
+			
 					<div class="container">
-	
-						<div class="row">
-	
-							<div class="col-sm-7 order-sm-2">
+						
+						<div id="contact">
+							<header class="text-center mb-60">
+								<h2>Contact Us</h2>
+								<p class="lead font-lato"> Move up to <strong>your</strong> expectation.</p>
+								<hr />
+							</header>
+							<div>
 								
-								<div class="heading-title mt-0">
-									<h2 class="fs-20 fw-400">DROP US A LINE OR JUST SAY HELLO</h2>
-								</div>
 								
-	
-	
-								<div>
-	
-	
+								
+								<!-- Contact --
+									MESSAGES
 									
-									<!--
-										MESSAGES
+									How it works?
+										The form data is posted to php/contact.php where the fields are verified!
+										php.contact.php will redirect back here and will add a hash to the end of the URL:
+										#alert_success 		= email sent
+										#alert_failed		= email not sent - internal server error (404 error or SMTP problem)
+										#alert_mandatory	= email not sent - required fields empty
+										Hashes are handled by assets/js/contact.js
 										
-											How it works?
-											The form data is posted to php/contact.php where the fields are verified!
-											php.contact.php will redirect back here and will add a hash to the end of the URL:
-												#alert_success 		= email sent
-												#alert_failed		= email not sent - internal server error (404 error or SMTP problem)
-												#alert_mandatory	= email not sent - required fields empty
-												Hashes are handled by assets/js/contact.js
-	
-											Form data: required to be an array. Example:
-												contact[email][required]  WHERE: [email] = field name, [required] = only if this field is required (PHP will check this)
-												Also, add `required` to input fields if is a mandatory field. 
-												Example: <input required type="email" value="" class="form-control" name="contact[email][required]">
-	
+										Form data: required to be an array. Example:
+										contact[email][required]  WHERE: [email] = field name, [required] = only if this field is required (PHP will check this)
+											Also, add `required` to input fields if is a mandatory field. 
+											Example: <input required type="email" value="" class="form-control" name="contact[email][required]">
+											
 											PLEASE NOTE: IF YOU WANT TO ADD OR REMOVE FIELDS (EXCEPT CAPTCHA), JUST EDIT THE HTML CODE, NO NEED TO EDIT php/contact.php or javascript
-														 ALL FIELDS ARE DETECTED DINAMICALY BY THE PHP
-	
+											ALL FIELDS ARE DETECTED DINAMICALY BY THE PHP
+											
 											WARNING! Do not change the `email` and `name`!
-														contact[name][required] 	- should stay as it is because PHP is using it for AddReplyTo (phpmailer)
-														contact[email][required] 	- should stay as it is because PHP is using it for AddReplyTo (phpmailer)
-									-->
-	
-									<!-- Alert Success -->
-									<div id="alert_success" class="alert alert-success mb-30">
-										<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-										<strong>Thank You!</strong> Your message successfully sent!
-									</div><!-- /Alert Success -->
-	
-	
-									<!-- Alert Failed -->
-									<div id="alert_failed" class="alert alert-danger mb-30">
-										<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-										<strong>[SMTP] Error!</strong> Internal server error!
-									</div><!-- /Alert Failed -->
-	
-	
-									<!-- Alert Mandatory -->
-									<div id="alert_mandatory" class="alert alert-danger mb-30">
-										<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-										<strong>Sorry!</strong> You need to complete all mandatory (*) fields!
-									</div><!-- /Alert Mandatory -->
-	
-	
-									<form action="php/contact.php" method="post" enctype="multipart/form-data">
-										<fieldset>
-											<input type="hidden" name="action" value="contact_send" />
-	
-											<div class="row">
-												<div class="col-md-4">
-													<label for="contact:name">Full Name *</label>
-													<input required type="text" value="" class="form-control" name="contact[name][required]" id="contact:name">
-												</div>
-												<div class="col-md-4">
-													<label for="contact:email">E-mail Address *</label>
+											contact[name][required] 	- should stay as it is because PHP is using it for AddReplyTo (phpmailer)
+											contact[email][required] 	- should stay as it is because PHP is using it for AddReplyTo (phpmailer)
+										-->
+										
+										<!-- Alert Success -->
+										<div id="alert_success" class="alert alert-success mb-30">
+											<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+											<strong>Thank You!</strong> Your message successfully sent!
+										</div><!-- /Alert Success -->
+										
+										
+										<!-- Alert Failed -->
+										<div id="alert_failed" class="alert alert-danger mb-30">
+											<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+											<strong>[SMTP] Error!</strong> Internal server error!
+										</div><!-- /Alert Failed -->
+										
+										
+										<!-- Alert Mandatory -->
+										<div id="alert_mandatory" class="alert alert-danger mb-30">
+											<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+											<strong>Sorry!</strong> You need to complete all mandatory (*) fields!
+										</div><!-- /Alert Mandatory -->
+										
+										<form action="php/contact.php" method="post" enctype="multipart/form-data">
+											<fieldset>
+												<input type="hidden" name="action" value="contact_send" />
+												<div class="row">
+											<div class="col-md-4">
+												<label for="contact:name">Full Name *</label>
+												<input required type="text" value="" class="form-control" name="contact[name][required]" id="contact:name">
+											</div>
+											<div class="col-md-4">
+												<label for="contact:email">E-mail Address *</label>
+												<input required type="email" value="" class="form-control" name="contact[email][required]" id="contact:email">
+											</div>
+											<div class="col-md-4">
+													<label for="contact: Company_name">Company name: *</label>
 													<input required type="email" value="" class="form-control" name="contact[email][required]" id="contact:email">
 												</div>
-												<div class="col-md-4">
-														<label for="contact: Company_name">Company name: *</label>
-														<input required type="email" value="" class="form-control" name="contact[email][required]" id="contact:email">
+												
+											<div class="col-md-4">
+												<label for="contact:phone">Phone *</label>
+												<input type="text" value="" class="form-control" name="contact[phone]" id="contact:phone">
+											</div>
+											<div class="col-md-6">
+												<label for="contact:Real_estate_project_name">Project Description *</label>
+												<input required type="text" value="" class="form-control" name="contact[subject][required]" id="contact:subject">
+											</div>
+											<div class="col-md-6">
+												<label for="contact:Real_estate_project_name">Real estate project name *</label>
+												<input required type="text" value="" class="form-control" name="contact[subject][required]" id="contact:subject">
+											</div>
+											
+											<div class="col-md-5">
+												<label for="contact:Department in charge of the elevators">Department in charge of the elevators *</label>
+												<input required type="text" value="" class="form-control" name="contact[subject][required]" id="contact:subject">
+											</div>
+											<div class="col-md-7">
+												<label for="contact:message">Message *</label>
+												<textarea required maxlength="10000" rows="6" class="form-control" name="contact[message]" id="contact:message"></textarea>
+											</div>
+	
+											<div class="row">
+													<div class="col-md-8">
+														<label for="contact:attachment">File Attachment *</label>
+		
+														<!-- custom file upload -->
+														<input class="custom-file-upload" type="file" id="file" name="contact[attachment]" id="contact:attachment" data-btn-text="Select a File" />
+														<small class="text-muted block">Max file size: 10Mb (zip/pdf/jpg/png)</small>
+		
 													</div>
-													
-												<div class="col-md-4">
-													<label for="contact:phone">Phone *</label>
-													<input type="text" value="" class="form-control" name="contact[phone]" id="contact:phone">
-												</div>
-												<div class="col-md-6">
-													<label for="contact:Real_estate_project_name">Project Description *</label>
-													<input required type="text" value="" class="form-control" name="contact[subject][required]" id="contact:subject">
-												</div>
-												<div class="col-md-6">
-													<label for="contact:Real_estate_project_name">Real estate project name *</label>
-													<input required type="text" value="" class="form-control" name="contact[subject][required]" id="contact:subject">
 												</div>
 												
-												<div class="col-md-5">
-													<label for="contact:Department in charge of the elevators">Department in charge of the elevators *</label>
-													<input required type="text" value="" class="form-control" name="contact[subject][required]" id="contact:subject">
-												</div>
-												<div class="col-md-7">
-													<label for="contact:message">Message *</label>
-													<textarea required maxlength="10000" rows="6" class="form-control" name="contact[message]" id="contact:message"></textarea>
-												</div>
-
+											</div>
 												<div class="row">
-														<div class="col-md-8">
-															<label for="contact:attachment">File Attachment *</label>
-			
-															<!-- custom file upload -->
-															<input class="custom-file-upload" type="file" id="file" name="contact[attachment]" id="contact:attachment" data-btn-text="Select a File" />
-															<small class="text-muted block">Max file size: 10Mb (zip/pdf/jpg/png)</small>
-			
-														</div>
+													<div class="col-md-6">
+														<button type="submit" class="btn btn-primary"><i class="fa fa-check"></i> SEND MESSAGE</button>
 													</div>
-													
 												</div>
-													<div class="row">
-														<div class="col-md-6">
-															<button type="submit" class="btn btn-primary"><i class="fa fa-check"></i> SEND MESSAGE</button>
-														</div>
-													</div>
-
-	
-										</fieldset>
-	
-									</form>
 	
 	
-								</div>
+									</fieldset>
+	
+								</form>
+	
+	
+							</div>
+						</div>
+								
+								
+								
+								
 	
 	
 							</div>
@@ -1604,7 +1593,7 @@
 	
 					</div>
 				</section>	
-				/Contact Us -->
+				
 
 			<!-- FOOTER -->
 			<footer id="footer">
