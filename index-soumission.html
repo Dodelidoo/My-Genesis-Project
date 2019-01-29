@@ -136,43 +136,7 @@
 				<!-- /SEARCH HEADER -->
 
 				<!-- TOP NAV -->
-				<header id="topNav">
-					<div class="container">
-
-						<!-- Mobile Menu Button -->
-						<button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
-							<i class="fa fa-bars"></i>
-						</button>
-
-						<!-- BUTTONS -->
-						<ul class="float-right nav nav-pills nav-second-main">
-
-						
-						</ul>
-						<!-- /BUTTONS -->
-
 				
-						
-						<!-- 
-							Top Nav 
-							
-							AVAILABLE CLASSES:
-							submenu-dark = dark sub menu
-						-->
-						<div class="navbar-collapse collapse float-right nav-main-collapse">
-							<nav class="nav-main">
-
-								<!--
-									NOTE
-									
-									For a regular link, remove "dropdown" class from LI tag and "dropdown-toggle" class from the href.
-									Direct Link Example: 
-
-									<li>
-										<a href="#">HOME</a>
-									</li>
-								-->	<div id="header" class="navbar-toggleable-md sticky header-md clearfix">
-
                 <!-- TOP NAV -->
                 <header id="topNav">
 					<div class="container">
@@ -327,28 +291,145 @@
 						data-height="700"
 						data-height="750"
 						data-height="800"
-				-->
-				<div class="fullwidthbanner" data-height="600" data-shadow="0" data-navigationStyle="preview2">
-					<ul class="hide">
+					-->
+											
+							<!--Contact us-->
+								<div class="container">
+										<h2 style="color:rgb(255, 0, 0); text-align: center;"> Rocket Submission</h2>
+			
+									<div id="contact">
+										<div class="text-center mb-60">
+											<p class="lead font-lato"> Move up to <strong>your</strong> expectation.</p>
+											<hr />
+										</div>
+									</div>
+									
 					
-					
+						<!--Premier choix a faire-->
 						
+						<form  id="building-form">
+							<label>
+								Building Type<br>
+								
+								<select id="building-choise">
+									<option value="none">-----Select---</option>
+									<option value="residential_1">Residential</option>
+									<option value="commercial_1">Commercial</option>
+									<option value="corporate_1">Corporate</option>
+									<option value="hybrid_1">Hybrid</option>
+								</select>
+							</label>
+						</form>
 
 
 
+						<div id="res-form" class="building-type, row">
+							<div class="col-md-4"><input id="res_app" type="number" class="form-control" placeholder="Nb of appartments"></div>
+							<div class="col-md-4"><input id="res_floor" type="number" class="form-control" placeholder="Nb of floors"></div>
+							<div class="col-md-4"><input id="res_base" type="number" class="form-control" placeholder="Nb of basements"></div>
+							
+						</div>
 
-						
+						<div id="com-form" class="building-type, row">
+								<div class="col-md-2"><input id="com_distinct" type="number" class="form-control" placeholder="Nb of separate businesses"></div>
+								<div class="col-md-2"><input id="com_floor" type="number" class="form-control" placeholder="Nb of floors"></div>
+								<div class="col-md-2"><input id="com_base" type="number" class="form-control" placeholder="Nb of basements"></div>
+								<div class="col-md-2"><input id="com_park" type="number" class="form-control" placeholder="Nb of parking slots"></div>
+								<div class="col-md-2"><input id="com_elevator" type="number" class="form-control" placeholder="Nb of elevator cages"></div>
+						</div>
 
-				<!--Contact us-->
-					<div class="container">
-							<h2 style="color:rgb(255, 0, 0); text-align: center;"> Rocket Submission</h2>
+						<div id="cor-form" class="building-type, row">
+								<div class="col-md-3"><input id="cor_ent_res" type="number" class="form-control" placeholder="Nb of separate tenant companies"></div>
+								<div class="col-md-2"><input id="cor_floor" type="number" class="form-control" placeholder="Nb of floors"></div>
+								<div class="col-md-2"><input id="cor_base" type="number" class="form-control" placeholder="Nb of basements"></div>
+								<div class="col-md-2"><input id="cor_park" type="number" class="form-control" placeholder="Nb of parking slots"></div>
+								<div class="col-md-3"><input id="cor_max_ppl_floor" type="number" class="form-control" placeholder="Max number of people / floor"></div>
+						</div>
 
-						<div id="contact">
-							<div class="text-center mb-60">
-								<p class="lead font-lato"> Move up to <strong>your</strong> expectation.</p>
-								<hr />
+						<div id="hyb-form" class="building-type, row">
+							<div class="col-md-4"><input id="hyb_com_distinct" type="number" class="form-control" placeholder="Nb of separate businesses"></div>
+							<div class="col-md-4"><input id="hyb_floor" type="number" class="form-control" placeholder="Nb of floors"></div>
+							<div class="col-md-4"><input id="hyb_base" type="number" class="form-control" placeholder="Nb of basements"></div>
+							<div class="col-md-4"><input id="cor_park" type="number" class="form-control" placeholder="Nb of parking slots"></div>
+							<div class="col-md-4"><input id="cor_max_ppl_floor" type="number" class="form-control" placeholder="Nb of max people / floor"></div>
+							<div class="col-md-4"><input id="cor_max_act_time" type="number" class="form-control" placeholder="Time of activity in building"></div>							
+						</div>
+
+
+
+						<form>
+							<input type="radio" name="quality" input id="" value="standard" checked>Standard
+							<input type="radio" name="quality" input id="" value="premium">Premium
+							<input type="radio" name="quality" input id="" value="excellum">Excellum
+						</form>
+
+
+						<div class="toggle-content" style="display: block;">
+										
+								<span class="clearfix">
+									<span class="float-right">$0.00</span>
+									<strong class="float-left"> Subtotal:</strong>
+								</span>
+								<span class="clearfix">
+									<span class="float-right">$0.00</span>
+									<span class="float-left">Discount:</span>
+								</span>
+								<span class="clearfix">
+									<span class="float-right">$0.00</span>
+									<span class="float-left">Shipping:</span>
+								</span>
+
+								
+								<span class="clearfix">
+									<span class="float-right">$0.00</span>
+									<span class="float-left"> Tax:</span>
+								</span>
+								
+								<hr>
+
+								<span class="clearfix">
+									<span class="float-right fs-20">$0.00</span>
+									<strong class="float-left"> TOTAL:</strong>
+								</span>
+
+								<hr>
+
+								
+								<a href="shop-checkout.html" class="btn btn-primary btn-lg btn-block fs-12"><i class="fa fa-mail-forward"></i> Send Submission</a>
 							</div>
-							<div>
+
+
+
+
+						<!-- <head> -->
+								<!-- <title>HTML Calculator</title>
+								</head>
+								<body bgcolor= "#000000" text= "gold">
+								<form name="calculator" >
+								<input type="button" value="1" onClick="document.calculator.ans.value+='1'">
+								<input type="button" value="2" onClick="document.calculator.ans.value+='2'">
+								<input type="button" value="3" onClick="document.calculator.ans.value+='3'">
+								<input type="button" value="4" onClick="document.calculator.ans.value+='4'">
+								<input type="button" value="5" onClick="document.calculator.ans.value+='5'">
+								<input type="button" value="6" onClick="document.calculator.ans.value+='6'">
+								<input type="button" value="7" onClick="document.calculator.ans.value+='7'">
+								<input type="button" value="8" onClick="document.calculator.ans.value+='8'">
+								<input type="button" value="9" onClick="document.calculator.ans.value+='9'">
+								<input type="button" value="-" onClick="document.calculator.ans.value+='-'">
+								<input type="button" value="+" onClick="document.calculator.ans.value+='+'">
+								<input type="button" value="*" onClick="document.calculator.ans.value+='*'">
+								<input type="button" value="/" onClick="document.calculator.ans.value+='/'">
+								 
+								<input type="button" value="0" onClick="document.calculator.ans.value+='0'">
+								<input type="reset" value="Reset">
+								<input type="button" value="=" onClick="document.calculator.ans.value=eval(document.calculator.ans.value)">
+								<br>Solution is <input type="textfield" name="$" value="">
+								</form>
+								</body> -->
+
+
+						
+
 								
 								
 								
@@ -396,7 +477,7 @@
 											<strong>Sorry!</strong> You need to complete all mandatory (*) fields!
 										</div><!-- /Alert Mandatory -->
 										
-										<form action="php/contact.php" method="post" enctype="multipart/form-data">
+										<!-- <form action="php/contact.php" method="post" enctype="multipart/form-data">
 											<fieldset>
 												<input type="hidden" name="action" value="contact_send" />
 												<div class="row">
@@ -439,7 +520,7 @@
 													<div class="col-md-8">
 														<label for="contact:attachment">File Attachment *</label>
 		
-														<!-- custom file upload -->
+														custom file upload
 														<input class="custom-file-upload" type="file" id="file" name="contact[attachment]" id="contact:attachment" data-btn-text="Select a File" />
 														<small class="text-muted block">Max file size: 10Mb (zip/pdf/jpg/png)</small>
 		
@@ -456,14 +537,14 @@
 	
 									</fieldset>
 	
-								</form>
+								</form> -->
 	
 	
 							</div>
 						</div>
 																							
 									
-							</div>
+							
 	
 	
 							<div class="col-sm-5 order-sm-1">
@@ -624,9 +705,9 @@
 
 
 		<!-- JAVASCRIPT FILES -->
-		<script>var plugin_path = 'assets/plugins/';</script>
+		<script>var plugin_path = 'assets/plugins/'; </script>
 		<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
-		<script src="comsub.js.js"></script>
+		<script src="comsub.js"></script>
 		<script src="assets/js/scripts.js"></script>
 		
 		<!-- STYLESWITCHER - REMOVE -->
