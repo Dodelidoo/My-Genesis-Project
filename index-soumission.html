@@ -4,7 +4,7 @@
 		<meta charset="utf-8" />
 		<title>Rocket Elevator inc. - Residential + Corporative</title>
 		<meta name="description" content="" />
-		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+		<meta name="Author" content="Dorin Grigoras + Charles Hebert @codeboxx [www.stepofweb.com]" />
 
 		<!-- mobile settings -->
 		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
@@ -94,8 +94,7 @@
 		<!-- /SLIDE TOP -->
 
 
-		<!-- wrapper -->
-		<div id="wrapper">
+		
 
 			<!-- 
 				AVAILABLE HEADER CLASSES
@@ -252,7 +251,7 @@
 								</ul>
 
 							</nav>
-						</div>
+						
 
 					</div>
 				</header>
@@ -322,73 +321,75 @@
 						</form>
 
 
-
+								<!--Residential-->
 						<div id="res-form" class="building-type, row">
-							<div class="col-md-4"><input id="res_app" type="number" class="form-control" placeholder="Nb of appartments"></div>
-							<div class="col-md-4"><input id="res_floor" type="number" class="form-control" placeholder="Nb of floors"></div>
-							<div class="col-md-4"><input id="res_base" type="number" class="form-control" placeholder="Nb of basements"></div>
+							<div class="col-md-4"><input id="res_app" type="number" class="form-control" placeholder="Nb of appartments" onchange="ResidentialCal()"></div>
+							<div class="col-md-4"><input id="res_floor" type="number" class="form-control" placeholder="Nb of floors" onchange="ResidentialCal()"></div>
+							<div class="col-md-4"><input id="res_base" type="number" class="form-control" placeholder="Nb of basements" onchange="ResidentialCal()"></div>
+							<div class="col-md-4"><input id="res_cage" type="number" class="form-control" placeholder="Nb of cages" onchange="ResidentialCal()"></div>
+							<div class="col-md-4"><input id="res_elev_recom" type="number" class="form-control" placeholder="Nb Elevators recommended" onchange="ResidentialCal()" readonly></div>
 							
 						</div>
-
+								<!--Commercial-->
 						<div id="com-form" class="building-type, row">
-								<div class="col-md-2"><input id="com_distinct" type="number" class="form-control" placeholder="Nb of separate businesses"></div>
-								<div class="col-md-2"><input id="com_floor" type="number" class="form-control" placeholder="Nb of floors"></div>
-								<div class="col-md-2"><input id="com_base" type="number" class="form-control" placeholder="Nb of basements"></div>
-								<div class="col-md-2"><input id="com_park" type="number" class="form-control" placeholder="Nb of parking slots"></div>
-								<div class="col-md-2"><input id="com_elevator" type="number" class="form-control" placeholder="Nb of elevator cages"></div>
+							<div class="col-md-4"><input id="com_distinct" type="number" class="form-control" placeholder="Nb of separate businesses" onchange="ComCal()"></div>
+							<div class="col-md-4"><input id="com_floor" type="number" class="form-control" placeholder="Nb of floors" onchange="ComCal()"></div>
+							<div class="col-md-4"><input id="com_base" type="number" class="form-control" placeholder="Nb of basements" onchange="ComCal()"></div>
+							<div class="col-md-4"><input id="com_park" type="number" class="form-control" placeholder="Nb of parking slots" onchange="ComCal()"></div>
+							<div class="col-md-4"><input id="com_elevator" type="number" class="form-control" placeholder="Nb of elevator cages" onchange="ComCal()"></div>
+							<div class="col-md-4"><output id="com_elev_recom" type="number" class="form-control" placeholder="Nb Elevators recommended" onchange="ComCal()" readonly></div>
+							
 						</div>
-
+								<!-- Corporate -->
 						<div id="cor-form" class="building-type, row">
-								<div class="col-md-3"><input id="cor_ent_res" type="number" class="form-control" placeholder="Nb of separate tenant companies"></div>
-								<div class="col-md-2"><input id="cor_floor" type="number" class="form-control" placeholder="Nb of floors"></div>
-								<div class="col-md-2"><input id="cor_base" type="number" class="form-control" placeholder="Nb of basements"></div>
-								<div class="col-md-2"><input id="cor_park" type="number" class="form-control" placeholder="Nb of parking slots"></div>
-								<div class="col-md-3"><input id="cor_max_ppl_floor" type="number" class="form-control" placeholder="Max number of people / floor"></div>
+								<div class="col-md-4"><input id="cor_ent_res" type="number" class="form-control" placeholder="Nb of separate tenant companies"></div>
+								<div class="col-md-4"><input id="cor_floor" type="number" class="form-control" placeholder="Nb of floors"></div>
+								<div class="col-md-4"><input id="cor_base" type="number" class="form-control" placeholder="Nb of basements"></div>
+								<div class="col-md-4"><input id="cor_park" type="number" class="form-control" placeholder="Nb of parking slots"></div>
+								<div class="col-md-4"><input id="cor_max_ppl_floor" type="number" class="form-control" placeholder="Max number of people / floor"></div>
+								<div class="col-md-4"><input id="cor_elev_recom" type="number" class="form-control" placeholder="Nb Elevators recommended" onchange="CorCal()" readonly></div>
 						</div>
-
+								<!-- Hybrid -->
 						<div id="hyb-form" class="building-type, row">
 							<div class="col-md-4"><input id="hyb_com_distinct" type="number" class="form-control" placeholder="Nb of separate businesses"></div>
 							<div class="col-md-4"><input id="hyb_floor" type="number" class="form-control" placeholder="Nb of floors"></div>
 							<div class="col-md-4"><input id="hyb_base" type="number" class="form-control" placeholder="Nb of basements"></div>
-							<div class="col-md-4"><input id="cor_park" type="number" class="form-control" placeholder="Nb of parking slots"></div>
-							<div class="col-md-4"><input id="cor_max_ppl_floor" type="number" class="form-control" placeholder="Nb of max people / floor"></div>
-							<div class="col-md-4"><input id="cor_max_act_time" type="number" class="form-control" placeholder="Time of activity in building"></div>							
+							<div class="col-md-4"><input id="hyb_park" type="number" class="form-control" placeholder="Nb of parking slots"></div>
+							<div class="col-md-4"><input id="hyb_max_ppl_floor" type="number" class="form-control" placeholder="Nb of max people / floor"></div>
+							<div class="col-md-4"><input id="hyb_max_act_time" type="number" class="form-control" placeholder="Time of activity in building"></div>			
+							<div class="col-md-4"><input id="hyb_elev_recom" type="number" class="form-control" placeholder="Nb Elevators recommended" onchange="HybCal()" readonly></div>				
 						</div>
 
 
 
 						<form>
-							<input type="radio" name="quality" input id="" value="standard" checked>Standard
-							<input type="radio" name="quality" input id="" value="premium">Premium
-							<input type="radio" name="quality" input id="" value="excellum">Excellum
+							<input type="radio" name="grade" input id="" value="7565" checked>Standard
+							<input type="radio" name="grade" input id="" value="12345">Premium
+							<input type="radio" name="grade" input id="" value="15400">Excellum
 						</form>
 
 
 						<div class="toggle-content" style="display: block;">
 										
-								<span class="clearfix">
-									<span class="float-right">$0.00</span>
-									<strong class="float-left"> Subtotal:</strong>
-								</span>
-								<span class="clearfix">
-									<span class="float-right">$0.00</span>
-									<span class="float-left">Discount:</span>
-								</span>
-								<span class="clearfix">
-									<span class="float-right">$0.00</span>
-									<span class="float-left">Shipping:</span>
-								</span>
+								<span class="clearfix" >
 
-								
+									<span class="float-right" ><output id="tot_elev"></output></span>
+									<strong class="float-left"> Total of Elevators:</strong>
+								</span>
 								<span class="clearfix">
-									<span class="float-right">$0.00</span>
-									<span class="float-left"> Tax:</span>
+									<span class="float-right"><output id="P_of_a_e"></output>$</span>
+									<span class="float-left">Price of an elevator:</span>
+								</span>
+																
+								<span class="clearfix">
+									<span class="float-right"><output id="Inst_fee"></output>$</span>
+									<span class="float-left"> Installation fee:</span>
 								</span>
 								
 								<hr>
 
 								<span class="clearfix">
-									<span class="float-right fs-20">$0.00</span>
+									<span class="float-right fs-20"><output id="TOTAL"></output>$</span>
 									<strong class="float-left"> TOTAL:</strong>
 								</span>
 
