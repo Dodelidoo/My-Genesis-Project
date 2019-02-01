@@ -47,36 +47,73 @@
             var RF = document.getElementById("res_floor").value;
             console.log(RF)
             var MoyLE = ((RA / RF) / 6);
+            console.log(MoyLE)
             var Floor20 = Math.ceil(RF / 20);
+            console.log(Floor20)
             var resCages = document.getElementById('res_cage')
+            var resElev = document.getElementById('res_elev_recom')
             resCages.value = Math.ceil(Floor20 * MoyLE);
-            document.getElementById('tot_elev').innerHTML = Floor20
+            //document.getElementById('Big_tot').innerHTML = Floor20
          
         console.log(resCages.value);
-        
-    };
+            resElev.value = resCages.value
+            
 
-
-        
     
+
     $(document).ready(function(){
-        $("input[type='radio']").on('click', function(){
+        $("input[type='radio']").on('change', function radio_button(){
             var radioValue = $("input[name='grade']:checked").val();
+            console.log(radioValue)
+            
             if(radioValue == "7565" ){
-                var costvalue = radioValue * 1.1
+                var VR = radioValue
+                var costvalue = VR * 1.1
+                //console.log(costvalue)
+                var resElev = document.getElementById('res_elev_recom').value
                 
+                document.getElementById("P_of_a_e").value = "7565";
+                document.getElementById("Inst_fee").value = costvalue;
+                var patate = resElev * costvalue
+                console.log(patate)
+                document.getElementById("TOTAL").value = patate;
+                var x = (resElev * costvalue)
+                console.log(x)
+
             }
             if(radioValue == "12345"){
-                var costvalue = radioValue * 1.13
+                var VR = radioValue
+                var costvalue = VR * 1.13
+                //console.log(costvalue)
+                var resElev = document.getElementById('res_elev_recom').value
+                
+                document.getElementById("P_of_a_e").value = "12345";
+                document.getElementById("Inst_fee").value = Math.round(costvalue*100)/100;
+                document.getElementById("TOTAL").value = Math.round(resElev * (costvalue*100))/100;
+                var x = (resElev * costvalue)
+                console.log(x)
+                
 
             }
             if(radioValue == "15400"){
-                var costvalue = radioValue * 1.16
+                var VR = radioValue
+                var costvalue = VR * 1.16
+                //console.log(costvalue)
+                var resElev = document.getElementById('res_elev_recom').value
+                
+                document.getElementById("P_of_a_e").value = "15400";
+                document.getElementById("Inst_fee").value = Math.round(costvalue*100)/100;
+                document.getElementById("TOTAL").value = Math.round(resElev * (costvalue*100))/100;
+                var x = (resElev * costvalue)
+                console.log(x)
+                
 
             }
+
+
         });
     });
-    
+};  
     
     
     // $(function)() {
@@ -92,27 +129,79 @@ $(function(){
     // var CME = document.getElementbyId("com_elevator")
 
     console.log("base2");
-   $("#com-form").hide();
-   $('#building-choise').change(function(){
-       if ($('#building-choise').val() === 'commercial_1'){
+    $("#com-form").hide();
+    $('#building-choise').change(function(){
+        if ($('#building-choise').val() === 'commercial_1'){
            $('#com-form').show();
-       }else{
-           $('#com-form').hide()
-       }
-   });
+        }else{
+            $('#com-form').hide()
+        }
+    });
 });
 
 //Commercial Calculs
 
 function ComCal() {
-   
-   
-  var Tabarnack = document.getElementById('com_elevator').value
+    
+    var com_elev = document.getElementById('com_elevator').value
+    
+    var Big_tot = com_elev;
+    
+    document.getElementById('com_elev_recom').innerHTML = Big_tot;
+    
+    // document.getElementById('com_elev_recom').value = Big_tot
+    
+     $(document).ready(function(){
+        $("input[type='radio']").on('change', function radio_button(){
+            var radioValue = $("input[name='grade']:checked").val();
+     
+     if(radioValue == "7565" ){
+        var VR = 7565
+        var costvalue = VR * 1.1
+        //console.log(costvalue)
+        // var resElev = document.getElementById('cor_elev_recom').value
+        
+        document.getElementById("P_of_a_e").value = "7565";
+        document.getElementById("Inst_fee").value = costvalue;
+        document.getElementById("TOTAL").value = Big_tot * costvalue;
+        var x = (Big_tot * costvalue)
+        console.log(x)
 
-  var test = Tabarnack;
+    }
+    if(radioValue == "12345"){
+        var VR = radioValue
+        var costvalue = VR * 1.13
+        //console.log(costvalue)
+      
+        document.getElementById("P_of_a_e").value = "12345";
+        document.getElementById("Inst_fee").value = Math.round(costvalue*100)/100;
+        document.getElementById("TOTAL").value = Math.round(Big_tot * (costvalue*100))/100;
+        var x = (Big_tot * costvalue)
+        console.log(x)
+        
 
-  document.getElementById('com_elev_recom').innerHTML = test;
-}
+    }
+    if(radioValue == "15400"){
+        var VR = radioValue
+        var costvalue = VR * 1.16
+        //console.log(costvalue)
+        
+        
+        document.getElementById("P_of_a_e").value = "15400";
+        document.getElementById("Inst_fee").value = Math.round(costvalue*100)/100;
+        document.getElementById("TOTAL").value = Math.round(Big_tot * (costvalue*100))/100;
+        var x = (Big_tot * costvalue)
+        console.log(x)
+        
+
+    }
+         
+
+        });
+    });
+};  
+    
+
 
 
 //Click Corporate
@@ -140,22 +229,81 @@ $(function(){
 //Corporate calculs
 
    function CorCal() {
-     var max_ppl_tot = cor_max_ppl_floor * (cor_floor + cor_base);
-     console.log(max_ppl_tot)
-     var cor_elev_recom = (max_ppl_tot /1000);
-     console.log(cor_elev_recom)
-     var cor_col_elev_recom = (cor_floor + cor_base) / 20 ;
+
+    var cor_max_ppl_floor = parseInt(document.getElementById("cor_max_ppl").value);
+    // console.log(cor_max_ppl_floor)
+    var cor_floor = parseInt(document.getElementById("cor_floor1").value);
+    // console.log(cor_floor)
+    var cor_base = parseInt(document.getElementById("cor_base1").value);
+    // console.log(cor_base);
+
+     var max_ppl_tot = Math.ceil(cor_max_ppl_floor * (cor_floor + cor_base));
+     // console.log(max_ppl_tot)
+     var cor_elev_recom = Math.ceil(max_ppl_tot / 1000);
+     //console.log(cor_elev_recom)
+     var cor_col_elev_recom = Math.ceil((cor_floor + cor_base) / 20) ;
      console.log(cor_col_elev_recom)
-     var cor_tot_elev = (cor_elev_recom / cor_col_elev_recom) ;
+     var cor_tot_elev = Math.ceil(cor_elev_recom / cor_col_elev_recom) ;
      console.log(cor_tot_elev)
-     document.getElementById("cor_elev_recom") = cor_tot_elev ;
-    var Big_tot = cor_tot_elev * cor_col_elev
-    console.log(Big_tot)
-    document.getElementById('TOTAL') = Big_tot
-} 
+     var Big_tot = Math.ceil(cor_tot_elev * cor_col_elev_recom);
+     console.log(Big_tot)
+     
+     
 
+    //  var totaltot =  * big_tot2
 
+     
+     document.getElementById('cor_elev_recom').value = Big_tot
+     
+     $(document).ready(function(){
+        $("input[type='radio']").on('change', function radio_button(){
+            var radioValue = $("input[name='grade']:checked").val();
+     
+     if(radioValue == "7565" ){
+        var VR = 7565
+        var costvalue = VR * 1.1
+        //console.log(costvalue)
+        // var resElev = document.getElementById('cor_elev_recom').value
+        
+        document.getElementById("P_of_a_e").value = "7565";
+        document.getElementById("Inst_fee").value = costvalue;
+        document.getElementById("TOTAL").value = Big_tot * costvalue;
+        var x = (Big_tot * costvalue)
+        console.log(x)
 
+    }
+    if(radioValue == "12345"){
+        var VR = radioValue
+        var costvalue = VR * 1.13
+        //console.log(costvalue)
+      
+        document.getElementById("P_of_a_e").value = "12345";
+        document.getElementById("Inst_fee").value = Math.round(costvalue*100)/100;
+        document.getElementById("TOTAL").value = Math.round(Big_tot * (costvalue*100))/100;
+        var x = (Big_tot * costvalue)
+        console.log(x)
+        
+
+    }
+    if(radioValue == "15400"){
+        var VR = radioValue
+        var costvalue = VR * 1.16
+        //console.log(costvalue)
+        
+        
+        document.getElementById("P_of_a_e").value = "15400";
+        document.getElementById("Inst_fee").value = Math.round(costvalue*100)/100;
+        document.getElementById("TOTAL").value = Math.round(Big_tot * (costvalue*100))/100;
+        var x = (Big_tot * costvalue)
+        console.log(x)
+        
+
+    }
+         
+
+        });
+    });
+}; 
 
 
 
@@ -185,20 +333,102 @@ $(function(){
 
 
 function HybCal() {
-    var max_ppl_tot = hyb_max_ppl_floor * (hyb_floor + hyb_base);
 
-    var hyb_elev_recom = (max_ppl_tot /1000);
+    var hyb_max_ppl_floor = parseInt(document.getElementById("hyb_max_ppl").value);
+    var hyb_floor = parseInt(document.getElementById("hyb_floor1").value);
+    var hyb_base = parseInt(document.getElementById("hyb_base1").value)
 
-    var hyb_col_elev_recom = (hyb_floor + hyb_base) / 20 ;
+     var max_ppl_tot = Math.ceil(hyb_max_ppl_floor * (hyb_floor + hyb_base));
+     console.log(max_ppl_tot)
+     var hyb_elev_recom = Math.ceil(max_ppl_tot /1000);
+     console.log(hyb_elev_recom)
+     var hyb_col_elev_recom = Math.ceil((hyb_floor + hyb_base) / 20) ;
+     console.log(hyb_col_elev_recom)
+     var hyb_tot_elev = Math.ceil(hyb_elev_recom / hyb_col_elev_recom) ;
+     console.log(hyb_tot_elev)
+     var Big_tot = Math.ceil(hyb_tot_elev * hyb_col_elev_recom);
+     console.log(Big_tot)
+     document.getElementById('TOTAL').innerHTML = Big_tot
+     
+     if (Number.isNaN(max_ppl_tot) || max_ppl_tot == "Infinity" || max_ppl_tot == null) {
 
-    var hyb_tot_elev = (hyb_elev_recom / hyb_col_elev_recom) ;
+        max_ppl_to = 0;
+ 
+    }
 
-    document.getElementById('tot_elev').innerHTML =  hyb_tot_elev;
-}
+    document.getElementById('hyb_elev_recom').value = Big_tot
+     
+     $(document).ready(function(){
+        $("input[type='radio']").on('change', function radio_button(){
+            var radioValue = $("input[name='grade']:checked").val();
+     
+     if(radioValue == "7565" ){
+        var VR = 7565
+        var costvalue = VR * 1.1
+        //console.log(costvalue)
+        // var resElev = document.getElementById('cor_elev_recom').value
+        
+        document.getElementById("P_of_a_e").value = "7565";
+        document.getElementById("Inst_fee").value = costvalue;
+        document.getElementById("TOTAL").value = Big_tot * costvalue;
+        var x = (Big_tot * costvalue)
+        console.log(x)
+
+    }
+    if(radioValue == "12345"){
+        var VR = radioValue
+        var costvalue = VR * 1.13
+        //console.log(costvalue)
+      
+        document.getElementById("P_of_a_e").value = "12345";
+        document.getElementById("Inst_fee").value = Math.round(costvalue*100)/100;
+        document.getElementById("TOTAL").value = Math.round(Big_tot * (costvalue*100))/100;
+        var x = (Big_tot * costvalue)
+        console.log(x)
+        
+
+    }
+    if(radioValue == "15400"){
+        var VR = radioValue
+        var costvalue = VR * 1.16
+        //console.log(costvalue)
+        
+        
+        document.getElementById("P_of_a_e").value = "15400";
+        document.getElementById("Inst_fee").value = Math.round(costvalue*100)/100;
+        document.getElementById("TOTAL").value = Math.round(Big_tot * (costvalue*100))/100;
+        var x = (Big_tot * costvalue)
+        console.log(x)
+        
+
+    }
+         
+
+        });
+    });
+};  
 
 
+    $("input").on("keyup click", function (){
+        var choiseValue =   $('#building-type option:selected').value;
 
+        if(choiseValue=='res-form'){
 
+            ResidentialCal();
+        }
+        if(choiseValue == "com-form"){
+
+            ComCal()
+        }
+        if(choiseValue == "cor-form") {
+
+            CorCal()
+        }
+        if(choiseValue == "hyb-form") {
+
+            HybCal()
+        }
+    })
 // document.getElementById('tot_elev').innerHTML = 
 // document.getElementById('P_of_a_e').innerHTML = 
 // document.getElementById('Inst_fee').innerHTML = 
